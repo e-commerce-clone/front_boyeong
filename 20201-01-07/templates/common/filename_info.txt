@@ -1,0 +1,12 @@
+find_id - 아이디찾기
+find_id_ok - 아이디찾기완료
+
+find_pw - 비밀번호찾기
+find_pw_ok - 비밀번호인증하기
+find_pw_email - 비밀번호인증완료
+reset_pw - 비밀번호재설정
+
+login - 로그인하기
+login_ok - 로그인완료(메인페이지)
+
+signup - 회원가입하기(sample page)
