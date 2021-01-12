@@ -4,7 +4,6 @@
         <script src="http://code.jquery.com/jquery.min.js"></script>
         <title>shopping-cart</title>
         <link rel="stylesheet" href="css/cart.css">
-        <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/section1.css">
         <link rel="stylesheet" href="css/list.bundle.css">
@@ -177,7 +176,8 @@
                                             <div class="cart_delivery"><h3 class="tit">배송지</h3>
                                                 <div class="address"><p class="addr">배송주소</p>
                                                     <span class="delivery star">샛별배송</span>
-                                                    <a href="#" class="btn default">배송지 변경</a></div></div>
+                                                    <a href="ship_destination.html" onclick="window.open(this.href,'shipping destination','width=514, height=584');return false;" class="btn default">배송지 변경</a></div></div>
+                                                   <!-- 새 탭으로 열기 href 찾아보기-->
                                                     <div class="amount_view"><dl class="amount">
                                                         <dt class="tit">상품금액</dt><dd class="price">
                                                             <span class="num">0</span><span class="won">원</span>
@@ -202,6 +202,18 @@
             </form>
             <script src="/appProxy/appData.php?ver=1.25.24"></script>
             <script src="/asset/js/cart/list.bundle.js?ver=1.25.24"></script>
+            <script type="text/JavaScript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
+    
+<!-- 작은창으로 배송지변경 창 열기 찾아보기-->
+            <script type="text/javascript">
+                var c_window = window.open('','','width=514px, height=584px');
+
+                c_window.resizeTo(514,584);
+            </script>
+
+
+
+
             <script>
             _cart.showItemList('pc');
             
