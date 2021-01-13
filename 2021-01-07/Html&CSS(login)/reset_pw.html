@@ -1,0 +1,35 @@
+<head>
+    <meta charset="utf-8">        
+    <title></title>        
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<div class="content">
+    
+    <div class="section_login">
+        <h3 class="tit_login">비밀번호 찾기</h3>
+
+        <div class="layer_parent">
+            
+        <div class="write_form find_view">
+            <form name="certForm" method="post" action="/shop/member/change_pwd.php" target="certFrame">
+                <strong class="tit_label">새 비밀번호 등록</strong>
+
+                <input type="password" name="newPassword" id="newPassword" class="password" onfocus="pwValidate.checkNewPassword(document.frmMember)" onkeyup="pwValidate.checkNewPassword(document.frmMember)" onblur="pwValidate.emptyPwState()" maxlength="16" placeholder="새 비밀번호를 입력해주세요">
+                <p style="text-align:left;" class="pw_chk">
+                    최소 10글자 이상/영문, 숫자, 특수문자 2개 이상 조합<br>
+                    동일한 숫자 3개 이상 연속 사용 불가
+                </p>
+                <strong class="tit_label">새 비밀번호 확인</strong>
+                <input type="password" name="confirmPassword" class="password" id="confirmPassword" maxlength="16" placeholder="새 비밀번호를 한 번 더 입력해주세요">
+                <p class="pw_confirm"></p>
+                <button type="submit" class="btn_type1">
+                    <span class="txt_type">확인</span>
+                    <!-- 로그인페이지 이동-->
+                </button>
+
+            </form>
+            
+        </div>
+    </div>
+</div>
