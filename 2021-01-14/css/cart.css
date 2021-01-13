@@ -180,6 +180,17 @@ element.style {
 .section_destination .only_pc * {
     font-family: Noto Sans;
 }
+.section_destination .only_pc input[type=text] {
+    height: 44px;
+    padding: 1px 11px 0 15px;
+    border-radius: 3px;
+    font-family: Noto Sans;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: -.5px;
+    border: 1px solid #ddd;
+    width:45%;
+}
 .section_destination .only_pc .list.type_select li {
     padding-left: 64px;
 }
@@ -215,6 +226,28 @@ element.style {
     line-height: 24px;
     letter-spacing: -.5px;
     text-align: center;
+}
+.section_destination .only_pc.modify .address {
+    padding-bottom: 12px;
+    padding-left:5px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -.3px;
+}
+.section_destination .only_pc.modify .label_block {
+    padding-bottom: 7px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -.3px;
+}
+.section_destination .only_pc.modify .field {
+    padding-top: 22px;
+}
+.section_destination .only_pc.modify .btn.active {
+    margin-top: 30px;
+    width:45%;
 }
 /* --- */
 .section_destination .list {

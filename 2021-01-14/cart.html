@@ -1,3 +1,4 @@
+{% load static%}
 <html>
     <head>    
         <meta charset="utf-8">
@@ -171,15 +172,17 @@
                                     <input type="checkbox" name="checkAll" disabled="" checked="">
                                     <span class="ico"></span>전체선택 (0/0)</label>
                                     <a href="#none" class="btn_delete">선택삭제</a></div></div></div>
+                                    <!-- 삭제 시 db삭제 > 페이지 새로고침-->
                                     <div class="cart_result">
                                         <div class="inner_result" style="top: 60px;">
                                             <div class="cart_delivery"><h3 class="tit">배송지</h3>
                                                 <div class="address"><p class="addr">배송주소</p>
                                                     <span class="delivery star">샛별배송</span>
                                                     <a href="ship_destination.html" onclick="window.open(this.href,'shipping destination','width=514, height=584');return false;" class="btn default">배송지 변경</a></div></div>
-                                                   <!-- 새 탭으로 열기 href 찾아보기-->
+                                                   
                                                     <div class="amount_view"><dl class="amount">
                                                         <dt class="tit">상품금액</dt><dd class="price">
+                                                            <!-- 가격들어올 자리 -->
                                                             <span class="num">0</span><span class="won">원</span>
                                                         </dd></dl>
                                                         <dl class="amount"><dt class="tit">상품할인금액</dt>
@@ -189,6 +192,7 @@
                                                                     <dd class="price"><span class="num">0</span>
                                                                         <span class="won">원</span></dd></dl>
                                                                         <dl class="amount lst"><dt class="tit">결제예정금액</dt>
+                                                                            <!-- 총 합산 가격자리-->
                                                                             <dd class="price"><span class="num">0</span><span class="won">원</span></dd></dl><div class="reserve"></div></div>
                                                                             <div class="btn_submit">
                                                                                 <button type="submit" class="btn disabled">상품을 담아주세요</button></div><div class="notice">
@@ -204,16 +208,6 @@
             <script src="/asset/js/cart/list.bundle.js?ver=1.25.24"></script>
             <script type="text/JavaScript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
     
-<!-- 작은창으로 배송지변경 창 열기 찾아보기-->
-            <script type="text/javascript">
-                var c_window = window.open('','','width=514px, height=584px');
-
-                c_window.resizeTo(514,584);
-            </script>
-
-
-
-
             <script>
             _cart.showItemList('pc');
             
