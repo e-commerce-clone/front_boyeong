@@ -46,6 +46,19 @@ element.style {
     z-index: 2;
     height: 46px;
 }
+.box .list li .name .package {
+    display: block;
+    max-height: 48px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+    line-height: 20px;
+    word-break: break-all;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
 .only_pc * {
     font-family: Noto Sans;
     letter-spacing: 0;
@@ -61,7 +74,7 @@ element.style {
 .only_pc .pop_list {
     overflow: hidden;
     width: 470px;
-    margin: 18px auto 0;
+    margin: auto 14px;
     padding: 15px 0 13px;
     border-top: 2px solid #333;
     border-bottom: 1px solid #333;
@@ -75,12 +88,100 @@ element.style {
     letter-spacing: -.5px;
     text-align: center;
 }
-
+.only_pc .cart_select .inner_select {
+    position: static;
+    padding: 0 10px 0 2px;
+    border-bottom: none;
+}
+.only_pc .box {
+    border-top: 1px solid #333;
+}
+.only_pc .box .tit_box {
+    overflow: hidden;
+    height: 60px;
+    padding: 14px 5px 15px 0;
+}
+.only_pc .box .tit .inner_tit {
+    position: static;
+    float: left;
+    width: 50%;
+    height: auto;
+    padding: 3px 0 0 ;
+    margin-left: .5em;
+    font-weight: 700;
+    line-height: 26px;
+}
+.only_pc .box .list {
+    padding: 0;
+    border-bottom: 1px solid #f4f4f4;
+}
+.only_pc .box .list li .name {
+    display: table;
+    width: 463px;
+    min-height: 128px;
+    padding: 19px 0 18px 136px;
+}
+.only_pc .box .list li .name .package {
+    overflow: hidden;
+    max-height: 54px;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+.only_pc .box .list li .name .inner_name {
+    display: table-cell;
+    vertical-align: middle;
+}
+.only_pc .box .list li .name .info {
+    overflow: hidden;
+}
+.only_pc .box .list li .goods {
+    overflow: visible;
+    height: 100%;
+    padding-top: 0;
+}
+.only_pc .box .tit_box .btn_dropup {
+    display: block;
+    overflow: hidden;
+    float: right;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background-image: url(https://res.kurly.com/pc/service/cart/2007/ico_dropup.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 50% 50%;
+    font-size: 0;
+    text-indent: -9999px;
+}
+.only_pc .box .list li .goods .price .count {
+    position: absolute;
+    left: 473px;
+    top: 50%;
+    margin-top: -13px;
+}
+.only_pc .box .list li .goods .price .in_price .selling {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: right;
+}
+.only_pc .box .list li .item {
+    overflow: hidden;
+    min-height: 128px;
+    padding: 0;
+}
+.box .list li:first-child .item {
+    border-top: 0;
+}
 .only_pc .pop_list .delivery {
     width: 342px;
 }
 
-.only_pc.fixed_head {
+.only_pc .fixed_head {
     position: fixed;
     z-index: 1;
     left: 0;
@@ -461,4 +562,8 @@ ol, ul {
 li {
     text-align: -webkit-match-parent;
     display: list-item;
+}
+::-webkit-scrollbar{
+    display:none;
+    -ms-overflow-style: none;
 }
