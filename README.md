@@ -15,7 +15,8 @@
 :heavy_check_mark:장바구니  
 :heavy_check_mark:기본배송지변경  
 :heavy_check_mark:배송지수정  
-:x:새로운배송지추가  
+:heavy_check_mark:새로운배송지추가  
+:x:Kakao address search api  
 
 
 
