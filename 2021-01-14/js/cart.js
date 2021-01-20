@@ -1,12 +1,12 @@
-// 배송지추가에 쓰일 api : 추후구현예정
+// 배송지추가에 쓰일 api : problem : 클릭 후 text박스에 주소가 입력되지 않음.
 window.addEventListener('DOMContentLoaded',function(){
 
-    const juso = document.querySelector('#newAddressAddBtn');
-    const user_address = document.querySelector('#user_address');
-    const user_detail_address = document.querySelector('#user_detail_address'); 
-    const juso_search = document.querySelector('.juso_search');
+    const juso = document.querySelector('#juso');
+    const user_address = document.querySelector('#addrMain');
+    const user_detail_address = document.querySelector('#addrSub'); 
+    const juso_search = document.querySelector('.feild');
 
-    juso.addEventListener('click', juso_search);  
+    juso.addEventListener('click', addr_search);  
     // 주소 검색 클릭 하면 함수 실행
 
     
@@ -48,18 +48,12 @@ window.addEventListener('DOMContentLoaded',function(){
                 } else {
                     document.getElementById("sample6_extraAddress").value = '';
                 }
-
+//이부분이왜안되는걸까.
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
-               
-                document.getElementById("user_address").value = addr;
+                document.getElementById("addrMain").value = addr;
                 // 커서를 상세주소 필드로 이동한다.
-                document.getElementById("user_detail_address").focus();
+                document.getElementById("addrSub").focus();
 
-                //주소 검색이 완료된 후 변하는 css 목록
-                user_address.classList.add('on'); //선택한 주소 나오는 창 생성 
-                juso_search.classList.add('on'); //주소 검색 쪽 height 키움
-                user_detail_address.classList.add('on');  // 상세 주소 입력하게 나오는 창 생성
-                juso.classList.add('on');    //주소검색 버튼 작게 만들기 on
 
                 // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
                 // 예제를 참고하여 다양한 활용법을 확인해 보세요.
