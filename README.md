@@ -10,13 +10,15 @@
 
 
 
-2. 2020-01-08 ~ 2021-01-14 - 장바구니 페이지 구현
+2. 2020-01-08 ~ 2021-01-28 - 장바구니 페이지 구현
 
 :heavy_check_mark:장바구니  
 :heavy_check_mark:기본배송지변경  
 :heavy_check_mark:배송지수정  
 :heavy_check_mark:새로운배송지추가  
-:x:Kakao address search api  
+:heavy_check_mark:Kakao address search api  
+:x:background-image rotate (접기 / 펼치기)  
+:x:개수(수) 칸 늘리기  
 
 
 
