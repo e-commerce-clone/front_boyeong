@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded',function(){
     const juso_search = document.querySelector('.feild');
 
     juso.addEventListener('click', addr_search);  
-    // 주소 검색 클릭 하면 함수 실행
+    // 검색 클릭 하면 함수 실행
 
     
     function addr_search(){   //주소 검색 카카오 api 
@@ -62,3 +62,72 @@ window.addEventListener('DOMContentLoaded',function(){
         }).open();
     }
 });
+
+$(function(){ 
+    $('.plus').click(function(){ //count up
+        var n = $('.plus').index(this);
+        var num = $(".num:eq("+n+")").val();
+        if (num!=7){
+            num = $(".num:eq("+n+")").val(num*1+1); 
+        }
+        if (num==7){
+            alert('최대 7개까지 구매 가능한 상품입니다.');
+            return;
+        }
+    });
+    $('.minus').click(function(){  // count down..
+        var n = $('.minus').index(this);
+        var num = $(".num:eq("+n+")").val();
+        if (num!=1){
+            num = $(".num:eq("+n+")").val(num*1-1); 
+        }
+    });
+});
+function check_sel_all(checkbox)  { /*개별 선택에 따른 전체선택 모습 변경*/
+    const selectall = document.querySelectorAll('input[name="checkAll"]');
+    const checkboxes = document.querySelectorAll('input[name="checkOne"]');
+
+    var temp = false;
+    checkboxes.forEach((checkbox) => {
+        if (checkbox.checked){
+            temp=true;
+        }
+    });
+    
+    if (temp === false){
+        selectall[0].checked = false;            
+        selectall[1].checked = false;
+
+    }        
+    
+}
+function sel_all(selectAll){ /* 전체선택버튼 활성화 */
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = selectAll.checked
+    });
+}
+
+function del_row(ths){
+    var ths = $(ths);
+
+    ths.parents("li").remove();
+}
+
+function dropup(){ /* 접기 /펼치기 - problem:이미지회전이안됨. 추후수정필요 */
+    
+
+    if(document.getElementById('dropup_list').style.display === 'block') {
+        document.getElementById('dropup_list').style.display = 'none';
+        document.getElementById('btn_dropup').textContent = '펼치기';
+      } 
+    else {
+        document.getElementById('dropup_list').style.display = 'block';
+        document.getElementById('btn_dropup').textContent = '접기';
+
+      }
+}
+
+
+

@@ -142,27 +142,7 @@ element.style {
     height: 100%;
     padding-top: 0;
 }
-.only_pc .box .tit_box .btn_dropup {
-    display: block;
-    overflow: hidden;
-    float: right;
-    width: 30px;
-    height: 30px;
-    border: 0;
-    background-image: url(https://res.kurly.com/pc/service/cart/2007/ico_dropup.svg);
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: 30px 30px;
-    background-position: 50% 50%;
-    font-size: 0;
-    text-indent: -9999px;
-}
-.only_pc .box .list li .goods .price .count {
-    position: absolute;
-    left: 473px;
-    top: 50%;
-    margin-top: -13px;
-}
+
 .only_pc .box .list li .goods .price .in_price .selling {
     display: block;
     font-weight: 700;
@@ -528,13 +508,13 @@ input[type=radio]:checked+.ico:after, input[type=radio]:checked:after {
     border-radius: 100%;
     background-color: #fff;
 }
-.skin_checkbox input:checked[type=radio]+.ico, input[type=checkbox]:checked+.ico {
+/* .skin_checkbox input:checked[type=radio]+.ico, input[type=checkbox]:checked+.ico {
     background-image: url(https://res.kurly.com/mobile/service/common/2006/ico_checkbox_checked.svg);
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: 24px 24px;
     background-position: 50% 50%;
-}
+} */
 .screen_out {
     display: block;
     overflow: hidden;
