@@ -79,9 +79,7 @@ $(function(){
 });
 function check_sel_all(checkbox)  { /*개별 선택에 따른 전체선택상태변경 */
     const selectall = document.querySelectorAll('input[name="checkAll"]');
-    const checkboxes = document.querySelectorAll('input[name="checkOne"]');
-
-    
+    const checkboxes = document.querySelectorAll('input[name="checkOne"]');    
     var temp = false;
     var temp2 = true;
     checkboxes.forEach((checkbox) => {
@@ -125,17 +123,22 @@ function del_row(ths){
 
 
 
-function dropup(){ /* 접기 /펼치기 - problem:이미지회전이안됨. 추후수정필요(css) */
+function dropup(){ /* 접기 / 펼치기 */
     
 
     if(document.getElementById('dropup_list').style.display === 'block') {
         document.getElementById('dropup_list').style.display = 'none';
+        $(".btn_dropup").addClass('off');
         return;
       } 
     
-    document.getElementById('dropup_list').style.display = 'block';
-
     
+    else{
+        document.getElementById('dropup_list').style.display = 'block';
+        $(".btn_dropup").removeClass('off');
+
+
+    }  
 }
 
 
