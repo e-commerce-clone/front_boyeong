@@ -17,8 +17,7 @@
 :heavy_check_mark:배송지수정  
 :heavy_check_mark:새로운배송지추가  
 :heavy_check_mark:Kakao address search api  
-:x:background-image rotate (접기 / 펼치기)  
-:x:개수(수) 칸 늘리기  
+  
 
 
 
