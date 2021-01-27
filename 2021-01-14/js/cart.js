@@ -1,4 +1,4 @@
-// 배송지추가에 쓰일 api : problem : 클릭 후 text박스에 주소가 입력되지 않음.
+// 배송지추가에 쓰일 api : problem 
 window.addEventListener('DOMContentLoaded',function(){
 
     const juso = document.querySelector('#juso');
@@ -48,7 +48,6 @@ window.addEventListener('DOMContentLoaded',function(){
                 } else {
                     document.getElementById("sample6_extraAddress").value = '';
                 }
-//이부분이왜안되는걸까.
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById("addrMain").value = addr;
                 // 커서를 상세주소 필드로 이동한다.
@@ -67,13 +66,8 @@ $(function(){
     $('.plus').click(function(){ //count up
         var n = $('.plus').index(this);
         var num = $(".num:eq("+n+")").val();
-        if (num!=7){
-            num = $(".num:eq("+n+")").val(num*1+1); 
-        }
-        if (num==7){
-            alert('최대 7개까지 구매 가능한 상품입니다.');
-            return;
-        }
+        num = $(".num:eq("+n+")").val(num*1+1); 
+        
     });
     $('.minus').click(function(){  // count down..
         var n = $('.minus').index(this);
@@ -83,24 +77,38 @@ $(function(){
         }
     });
 });
-function check_sel_all(checkbox)  { /*개별 선택에 따른 전체선택 모습 변경*/
+function check_sel_all(checkbox)  { /*개별 선택에 따른 전체선택상태변경 */
     const selectall = document.querySelectorAll('input[name="checkAll"]');
     const checkboxes = document.querySelectorAll('input[name="checkOne"]');
 
+    
     var temp = false;
+    var temp2 = true;
     checkboxes.forEach((checkbox) => {
         if (checkbox.checked){
             temp=true;
         }
+        if (!checkbox.checked){
+            temp2=false;
+        }
+        if (selectall[0].checked && !checkbox.checked){ //전체 선택이 아닐 경우1
+            selectall[0].checked = false;            
+            selectall[1].checked = false;
+        }
     });
     
-    if (temp === false){
+    if (temp === false){  //전체 선택이 아닐 경우2
         selectall[0].checked = false;            
         selectall[1].checked = false;
-
-    }        
+    }  
+    
+    else if (temp2 === true){ //전체선택일 경우
+        selectall[0].checked = true;            
+        selectall[1].checked = true;
+    }  
     
 }
+
 function sel_all(selectAll){ /* 전체선택버튼 활성화 */
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     
@@ -115,19 +123,32 @@ function del_row(ths){
     ths.parents("li").remove();
 }
 
-function dropup(){ /* 접기 /펼치기 - problem:이미지회전이안됨. 추후수정필요 */
+
+
+function dropup(){ /* 접기 /펼치기 - problem:이미지회전이안됨. 추후수정필요(css) */
     
 
     if(document.getElementById('dropup_list').style.display === 'block') {
         document.getElementById('dropup_list').style.display = 'none';
-        document.getElementById('btn_dropup').textContent = '펼치기';
+        return;
       } 
-    else {
-        document.getElementById('dropup_list').style.display = 'block';
-        document.getElementById('btn_dropup').textContent = '접기';
+    
+    document.getElementById('dropup_list').style.display = 'block';
 
-      }
+    
 }
 
 
-
+$(document).ready(function(){ /* 체크박스 선택후 삭제하기 */
+    $('.btn_delete').click(function(){
+ 
+      // 현재 체크된 체크박스의 li 정보 얻기
+      $("input:checkbox[name=checkOne]").each(function() {
+          if (this.checked)
+          {
+                var ths = $(this);
+                ths.parents("li").remove();
+          }
+      }); 
+    });
+});

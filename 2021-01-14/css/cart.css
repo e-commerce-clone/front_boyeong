@@ -101,6 +101,7 @@ element.style {
     height: 60px;
     padding: 14px 5px 15px 0;
 }
+
 .only_pc .box .tit .inner_tit {
     position: static;
     float: left;
@@ -308,6 +309,14 @@ element.style {
     letter-spacing: -.5px;
     text-align: center;
 }
+
+.section_destination .only_pc.modify .notice {
+    margin-bottom: 1px;
+    padding: 11px 0 0 17px;
+    font-size: 12px;
+    color: #999;
+    letter-spacing: -.1px;
+}
 .section_destination .only_pc.modify .address {
     padding-bottom: 12px;
     padding-left:5px;
@@ -395,6 +404,7 @@ element.style {
 }
 
 /* --- */
+
 .section_destination .list {
     background-color: #fff;
     --safe-area-inset-bottom: env(safe-area-inset-bottom);
@@ -452,14 +462,17 @@ element.style {
     font-size: 0;
     line-height: 0;
 }
-
-
-
-
 .section_destination .modify {
     padding: 4px 20px 0;
 }
-
+.section_destination .modify .notice {
+    position: relative;
+    margin-bottom: -2px;
+    padding: 12px 0 0 13px;
+    font-size: 12px;
+    color: #999;
+    line-height: 16px;
+}
 .section_destination .list .address .addr {
     font-size: 16px;
     color: #333;
@@ -591,13 +604,9 @@ h3 {
     margin-inline-end: 0px;
     font-weight: bold;
 }
-/* p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-} */
+input::placeholder{
+    color:rgb(196, 192, 192);
+}
 ol, ul {
     list-style-type: none;
 }
