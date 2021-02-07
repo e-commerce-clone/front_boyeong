@@ -1,4 +1,4 @@
-// 배송지추가에 쓰일 api : problem 
+// 배송지추가에 쓰일 api 
 window.addEventListener('DOMContentLoaded', function() {
 
     const juso = document.querySelector('#juso');
@@ -153,10 +153,11 @@ $(document).ready(function() { /* 체크박스 선택후 삭제하기 */
 
 
 //이부분을 서버에 맞게 수정해야할것같음.
-$(function() {
-    var save_bt = $('.btn active'); // 저장할 버튼을 변수에 선언
-    save_bt.click(function() {
-            var cnt = $('#stepperCounter').html(); // 변경된 수량
+$(document).ready(function() {
+    $(function() {
+        var save_bt = $('.btn active'); // 저장할 버튼을 변수에 선언
+        save_bt.click(function() {
+            var cnt = $('#stepperCounter').var(); // 변경된 수량
             var del = $('.item').html(); // 변경된 장바구니
             $.ajax({
                 url: './order?count=' + cnt + '/delete_goods=' + del, // 서버에 전달할 파일명 - 내가하는게맞나?
@@ -170,6 +171,7 @@ $(function() {
                     alert('Success'); // 성공시 코드
                 }
             });
-        })
-        // 해보고 안되면 .html()을 .val() 바꿔서 시도 바람. 안되면.... 모르겠다. ㅜㅜ
-})
+        });
+        // 해보고 안되면 .html()을 .var() 바꿔서 시도 바람. 안되면.... 모르겠다. ㅜㅜ
+    });
+});
