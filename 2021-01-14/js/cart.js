@@ -157,7 +157,7 @@ $(document).ready(function() {
     $(function() {
         var save_bt = $('.btn active'); // 저장할 버튼을 변수에 선언
         save_bt.click(function() {
-            var cnt = $('#stepperCounter').var(); // 변경된 수량
+            var cnt = $('#stepperCounter').val(); // 변경된 수량
             var del = $('.item').html(); // 변경된 장바구니
             $.ajax({
                 url: './order?count=' + cnt + '/delete_goods=' + del, // 서버에 전달할 파일명 - 내가하는게맞나?
