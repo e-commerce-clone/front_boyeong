@@ -10,13 +10,19 @@
 
 
 
-2. 2020-01-08 ~ 2021-01-28 - 장바구니 페이지 구현
+2. 2021-01-08 ~ 2021-01-28 - 장바구니 페이지 구현
 
 :heavy_check_mark:장바구니  
 :heavy_check_mark:기본배송지변경  
 :heavy_check_mark:배송지수정  
 :heavy_check_mark:새로운배송지추가  
 :heavy_check_mark:Kakao address search api  
+
+3. 2021-02-04 ~ 2021-02-11 - 고객센터 1:1문의 페이지 구현  
+  
+  
+4. 2021-02-11 ~ 2021-02-18 - 로그인 모바일 페이지  
+
   
 
 
