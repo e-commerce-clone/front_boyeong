@@ -3492,7 +3492,8 @@ tr#product-review-read p {
 }
 
 .boardWrite2 td {
-    padding-left: 5px
+    padding-left: 5px;
+    padding-bottom: 15px
 }
 
 #edits img {
@@ -3732,6 +3733,34 @@ tr#product-review-read p {
     background-color: #5f0080;
     color: #fff
 }
+
+
+/* 테스트 중.*/
+
+#ifm_order {
+    display: none;
+    width: 560px;
+    height: 390px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+#ifm_order.add {
+    display: block;
+    width: 560px;
+    height: 390px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+
+/*-------------------------------------------------------*/
 
 .bhs_button.active:hover {
     background-color: #5f0080;

@@ -8,3 +8,11 @@ function write_new() {
     $("#write").remove();
 
 }
+
+function order_open() {
+    $('#ifm_order').addClass('add');
+}
+
+function order_close() {
+    $('#ifm_order').removeClass('add');
+}

@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="css/customer.css">
     <link rel="stylesheet" href="css/section2.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <script src="js/customer.js"></script>
+
 </head>
 <div class="part">
     <form name="fm" id="fm" method="post" action="/shop/mypage/indb.php" enctype="multipart/form-data" onsubmit="return chkForm(this)" style="height: 100%;">
@@ -32,7 +34,7 @@
                         <option value="09">상품정보문의</option>
                         <option value="10">기타문의</option>
                     </select><br>
-                        <input type="text" name="subject" style="width:100%" required="" fld_esssential="" label="제목" value="">
+                        <input type="text" name="subject" style="width:100%;" required="" fld_esssential="" label="제목" value="">
                     </td>
                 </tr>
                 <tr>
@@ -41,14 +43,16 @@
                         <input type="text" name="ordno" style="width:25%" value="" readonly="readonly" onclick="$(this).blur()" onfocus="$(this).blur()">
                         <input onclick="order_open()" type="button" class="bhs_button yb" value="주문조회" style="float:none; line-height:27px; width:100px;">
                         <div style="position:relative;z-index:1">
-                            <iframe id="ifm_order" frameborder="0" scrolling="no" style="display:none;position:absolute;width:560px;height:380px;background-color:#fff;position:absolute;left:0;top:0;border:1px solid #000"></iframe>
+                            <iframe id="ifm_order" frameborder="0" scrolling="no" src="order_content.html"></iframe>
+                            <!-- <iframe id="ifm_order " frameborder="0 " scrolling="no " style="display: block; width: 560px; height: 390px; background-color: rgb(255, 255, 255); position: absolute; left: 0px; top: 0px; border: 1px solid rgb(0, 0,
+                                0); " src="order_content.html "></iframe> -->
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <th class="input_txt">이메일</th>
+                    <th class="input_txt ">이메일</th>
                     <td>
-                        <input type="text" name="email" value="email_Address" size="26" readonly="readonly" class="read_only">
+                        <input type="text" name="email " value="email_Address" size="26" readonly="readonly" class="read_only">
                         <span class="noline smalle" style="padding-left:10px"><input type="checkbox" name="mailling"><span
                             style="font-size:8pt;">답변수신을 이메일로 받겠습니다.</span></span>
                     </td>
@@ -74,8 +78,8 @@
                             <div class="inner_qnaNotice">
                                 <div class="notice_qna">
                                     <!--
-    1:1문의하기에 들어가는 class="qna_public"
-    상품문의하기에 들어가는 class="qna_goods"
+    1:1문의하기에 들어가는 class="qna_public "
+    상품문의하기에 들어가는 class="qna_goods "
     -->
                                     <strong class="tit qna_public">1:1 문의 작성 전 확인해주세요!</strong>
                                     <strong class="tit qna_goods">상품문의 작성 전 확인해 주세요!</strong>
@@ -178,19 +182,20 @@
                             });
                         </script>
                         <!-- 내용 : contents = textarea 자리 -->
-                        <textarea name="contents" style="width:100%;height:474px;" class="editing_area" label="내용"></textarea>
+                        <textarea name="contents " style="width:100%;height:474px; " class="editing_area " label="내용 "></textarea>
                     </td>
                 </tr>
                 <tr>
-                    <th class="input_txt">이미지</th>
+                    <th class="input_txt ">이미지</th>
                     <td>
-                        <table width="95%" id="table" cellpadding="0" cellspacing="0" border="0" style="border:solid 1px #f4f4f4; border-collapse:collapse;">
+                        <table width="95% " id="table " cellpadding="0 " cellspacing="0 " border="0 " style="border:solid 1px #f4f4f4; border-collapse:collapse; ">
                             <tbody>
-                                <tr id="tr_0">
-                                    <td width="20" nowrap="" align="center">1</td>
-                                    <td width="100%">
+                                <tr id="tr_0 ">
+                                    <td width="20 " nowrap=" " align="center ">1</td>
+                                    <td width="100% ">
                                         <input type="file" name="file[]" style="width:50%" class="linebg">
-                                        <a href="javascript:add()"></a>
+                                        <a href="javascript:add() ">
+                                            <img src="https://img.icons8.com/small/16/000000/add-folder.png" /> </a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -198,7 +203,7 @@
                         <table>
                             <tbody>
                                 <tr>
-                                    <td height="2"></td>
+                                    <td height="2 "></td>
                                 </tr>
                             </tbody>
                         </table>
