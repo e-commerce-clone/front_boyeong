@@ -475,6 +475,7 @@ only screen and (min-resolution:1.5dppx) {
 .page_aticle select,
 .page_aticle * {
     font-size: 13px;
+    color: rgb(65, 65, 65);
     font-family: noto sans;
     font-weight: 400;
     letter-spacing: 0

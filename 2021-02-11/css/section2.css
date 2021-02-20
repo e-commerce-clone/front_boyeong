@@ -2767,9 +2767,32 @@ tr#product-review-read p {
     line-height: 140%
 }
 
+.lists {
+    border-top: 2px solid #522772;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 13px;
+    line-height: 140%
+}
+
+.lists th {
+    padding: 20px 0;
+}
+
+.lists tr td {
+    padding: 20px 0;
+}
+
+.list1 {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.lists2 {
+    border-bottom: .5px solid #e6e6e6;
+}
+
 .xans-board-listheader tr td {
     padding: 12px;
-    border-top: 1px solid #f4f4f4;
+    border-top: 1px solid #e6e6e6;
     text-align: center;
     vertical-align: middle;
     word-wrap: break-word
@@ -3255,13 +3278,14 @@ tr#product-review-read p {
 }
 
 .xans-board-search input[type=text] {
-    height: 34px;
+    height: 30px;
     line-height: 34px;
     width: 220px;
     border: 1px solid #bfbfbf;
     color: #000;
     float: right;
-    padding: 4px
+    padding: 4px;
+    margin: 5px;
 }
 
 .xans-board-search select#search_date {
@@ -3476,7 +3500,8 @@ tr#product-review-read p {
 }
 
 .search_bt img {
-    float: right
+    float: right;
+    padding-top: 5px;
 }
 
 #Wbtns {
