@@ -1,0 +1,118 @@
+{% load static%}
+
+<head>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <title>customer service page</title>
+    <link rel="stylesheet" href="css/customer.css">
+    <link rel="stylesheet" href="css/section2.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="js/customer.js"></script>
+
+</head>
+
+<div class="page_aticle aticle_type2">
+    <div id="snb" class="snb_cc">
+        <h2 class="tit_snb">고객센터</h2>
+        <div class="inner_snb">
+            <ul class="list_menu">
+                <li>
+                    <a href="notice_page.html">공지사항</a>
+                </li>
+                <li class="on">
+                    <a href="customer_page.html">1:1 문의</a>
+                </li>
+
+            </ul>
+        </div>
+        <a href="#" class="link_inquire"><span class="emph">도움이 필요하신가요 ?</span> 1:1 문의하기</a>
+    </div>
+    <div class="page_section section_qna">
+        <div class="head_aticle">
+            <h2 class="tit">1:1 문의</h2>
+        </div>
+
+        <div id="content_write">
+            <table class="xans-board-listheader" width="100%">
+                <tbody>
+                    <tr class="input_txt">
+                        <th width="8%">번호</th>
+                        <th width="15%">카테고리 </th>
+                        <th>제목</th>
+                        <th width="12%">작성자</th>
+                        <th width="12%">작성일</th>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 1-1. 문의내역이 없을 경우 문구.-->
+            <!-- <div class="no_data" style="padding:150px 0 148px;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;font-size:12px;color:#4c4c4c">
+                1:1 문의 내역이 존재하지 않습니다.
+            </div> -->
+        </div>
+        <!-- 1-2. 문의내역이 없을 경우 페이지버튼 여부. (없음) -->
+        <!-- <div style="position:relative">
+            <div style="position:absolute;right:0;top:60px;">
+                <button id="write" class="write" onclick="write_new()"><span class="bhs_buttonsm yb" style="float:none;">글쓰기</span></button>
+            </div>
+        </div>
+        <div class="layout-pagination">
+            <div class="pagediv"></div>
+        </div> -->
+
+        <!-- end -->
+
+        <!-- 2-1. 만약 문의내용이 있을 경우 리스트(배열)-->
+        <div class="mypage_wrap" style="float:none;width:100%">
+            <table class="table_faq" width="100%" onclick="view_content(this, event)">
+                <tbody>
+                    <tr>
+                        <td width="8%" align="center">1</td>
+                        <td width="15%" align="center" class="stxt"><b>[회원정보문의]</b></td>
+                        <td id="tit" style="padding-top:5px; padding-bottom:5px;">
+                            test
+                            <span style="color:#007FC8;" class="stxt">[0]</span>
+                        </td>
+                        <td width="12%" align="center">사용자</td>
+                        <td width="12%" align="center">2021-02-21</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="table_faq_plus" style="display:none;padding:30px; border-top:1px solid #e6e6e6">
+                <div width="100%" style="padding-left:55px; padding-bottom:20px;">[ 주문번호 1590047443293 문의 ]</div>
+                <div width="100%" style="padding-left:55px;">test</div>
+                <!-- 넘어가야할 값-->
+                <div class="goods-review-grp-btn" style="text-align:right;">
+                    <button type="button" class="styled-button" onclick="write_edit()">수정</button>
+                    <button type="button" class="styled-button" onclick="remove()">삭제</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(".table_faq").click(function() { // 1:1문의 목록에 있는 행을 누를 경우 이벤트 발생.
+                var faq = $(".table_faq_plus");
+                if (faq.css('display') === "none") {
+                    faq.css('display', 'block');
+                } else if (faq.css('display') === "block") {
+                    faq.css('display', 'none');
+                }
+            });
+        </script>
+
+        <!-- 2-1. 문의내역이 있을 경우 페이지버튼 여부(있음. :after)-->
+
+        <div style="position:relative">
+            <div style="position:absolute;right:0;top:60px;">
+                <button id="write" class="write" onclick="write_new()"><span class="bhs_buttonsm yb" style="float:none;">글쓰기</span></button>
+            </div>
+        </div>
+        <div class="layout-pagination" style="font-size: 0px;">
+            <div class="pagediv"><a href="/shop/mypage/mypage_qna.php?&amp;page=1" class="layout-pagination-button layout-pagination-first-page">맨 처음 페이지로 가기</a><a href="/shop/mypage/mypage_qna.php?&amp;page=1" class="layout-pagination-button layout-pagination-prev-page">이전 페이지로 가기</a>
+                <strong class="layout-pagination-button layout-pagination-number __active">1</strong><a href="/shop/mypage/mypage_qna.php?&amp;page=1" class="layout-pagination-button layout-pagination-next-page">다음 페이지로 가기</a><a href="/shop/mypage/mypage_qna.php?&amp;page=1"
+                    class="layout-pagination-button layout-pagination-last-page">맨 끝 페이지로 가기</a></div>
+        </div>
+        <!-- end -->
+
+
+    </div>
+</div>
