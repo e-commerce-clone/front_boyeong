@@ -1,27 +1,50 @@
-function write_new() {
+var tit;
+
+function write_new() { // 글쓰기 클릭 시 이벤트
+    var faq = $(".mypage_wrap");
+    faq.css('display', 'none');
     $("#content_write").load("customer_write.html .part");
     $("#write").remove();
 
 }
 
-function write_edit() {
-    $("#content_write").load("customer_write.html .part");
+function write_edit() { //문의 수정하기 클릭 시 이벤트 - 수정 중
+    var faq = $(".mypage_wrap");
+    tit = $('#tit').text();
+    faq.css('display', 'none');
     $("#write").remove();
+    $("#content_write").load("customer_write.html .part");
+    alert(tit);
+
 
 }
 
-function order_open() {
+function order_open() { // 주문조회 창 열기
     $('#ifm_order').addClass('add');
 }
 
-function order_close() {
+function order_close() { // 주문조회 창 닫기
     $('#ifm_order').removeClass('add');
 }
 
-function order_put(ordno) {
+function order_put(ordno) { // 주문조회 주문번호 넣기
     document.fm.ordno.value = ordno;
     order_close();
 }
+
+$(document).ready(function() { // 문의 삭제하기
+    $("#delete").click(function() {
+        if (confirm("정말 삭제하시겠습니까?")) {
+            $('div.mypage_wrap').remove(); // 백엔드 수정 필요
+
+        } else {
+            return false;
+        }
+    })
+});
+
+
+/**------------------------------------------------------- order_content js */
 
 function add() { // 업로드 추가 삭제 . 
     var table = document.getElementById('table');
@@ -30,7 +53,7 @@ function add() { // 업로드 추가 삭제 .
         alert("업로드는 최대 " + reviewFileNum + "개만 지원합니다");
         return;
     }
-    var tr_num = table.rows.length; //문제가 뭘까? 변수명 같을텐데 ...
+    var tr_num = table.rows.length; //문제..
     oTr = table.insertRow(table.rows.length);
     oTr.id = "tr_" + (tr_num);
     oTd1 = oTr.insertCell(0);
