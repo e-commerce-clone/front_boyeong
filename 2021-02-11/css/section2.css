@@ -2763,6 +2763,7 @@ tr#product-review-read p {
 
 .xans-board-listheader {
     border-top: 2px solid #522772;
+    border-bottom: 1px solid #e6e6e6;
     font-size: 13px;
     line-height: 140%
 }
@@ -3468,10 +3469,6 @@ tr#product-review-read p {
     width: 180px
 }
 
-.table_faq {
-    border-top: 1px solid #f4f4f4
-}
-
 .table_faq tr td {
     padding: 20px 0
 }
@@ -3518,7 +3515,8 @@ tr#product-review-read p {
 
 .boardWrite2 td {
     padding-left: 5px;
-    padding-bottom: 15px
+    padding-bottom: 15px;
+    padding-top: 15px
 }
 
 #edits img {
