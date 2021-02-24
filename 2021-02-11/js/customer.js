@@ -8,7 +8,7 @@ function write_new() { // 글쓰기 클릭 시 이벤트
 
 }
 
-function write_edit() { //문의 수정하기 클릭 시 이벤트 - 수정 중
+function write_edit() { //문의 수정하기 클릭 시 이벤트 - 백엔드 작업 필요 (인자값 전달. ajax)
     var faq = $(".mypage_wrap");
     tit = $('#tit').text();
     faq.css('display', 'none');
@@ -44,10 +44,11 @@ $(document).ready(function() { // 문의 삭제하기
 });
 
 
+
 /**------------------------------------------------------- order_content js */
 
 function add() { // 업로드 추가 삭제 . 
-    var table = document.getElementById('table');
+    var table = document.getElementById('add_file');
     var reviewFileNum = "5";
     if (table.rows.length >= parseInt(reviewFileNum)) {
         alert("업로드는 최대 " + reviewFileNum + "개만 지원합니다");
@@ -65,14 +66,14 @@ function add() { // 업로드 추가 삭제 .
 }
 
 function del(index, ncode) {
-    var table = document.getElementById('table');
+    var table = document.getElementById('add_file');
     for (i = 0; i < table.rows.length; i++)
         if (index == table.rows[i].id) table.deleteRow(i);
     calcul();
 }
 
 function calcul() {
-    var table = document.getElementById('table');
+    var table = document.getElementById('add_file');
     for (var i = 0; i < table.rows.length; i++) {
         table.rows[i].cells[0].innerHTML = i + 1;
     }
