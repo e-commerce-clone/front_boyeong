@@ -31,5 +31,5 @@
   
 :heavy_check_mark:공지사항 목록 페이지  
 :heavy_check_mark:공지사항 상세 페이지  
-:heavy_check_mark:공지사항 작성 페이지 (only for admin)  
-:heavy_check_mark:1:1문의 관리자 답변 반영(고객센터 문의게시판)  
+:heavy_check_mark:공지사항 작성 페이지 (only for admin) - Django  
+:heavy_check_mark:1:1문의 관리자 답변 반영(고객센터 문의게시판) - Django  
