@@ -1,23 +1,24 @@
 var tit;
 
-function write_new() { // 글쓰기 클릭 시 이벤트
-    var faq = $(".mypage_wrap");
-    faq.css('display', 'none');
-    $("#content_write").load("customer_write.html .part");
-    $("#write").remove();
+// function write_new() { // 글쓰기 클릭 시 이벤트
+// var faq = $(".mypage_wrap");
+// faq.css('display', 'none');
+// location.href("customer_write.html");
+// $("#content_write").load("customer_write.html .part");
+// $("#write").remove();
 
-}
+// }
 
-function write_edit() { //문의 수정하기 클릭 시 이벤트 - 백엔드 작업 필요 (인자값 전달. ajax)
-    var faq = $(".mypage_wrap");
-    tit = $('#tit').text();
-    faq.css('display', 'none');
-    $("#write").remove();
-    $("#content_write").load("customer_write.html .part");
-    alert(tit);
+// function write_edit() { //문의 수정하기 클릭 시 이벤트 - 백엔드 작업 필요 (인자값 전달. ajax)
+//     var faq = $(".mypage_wrap");
+//     tit = $('#tit').text();
+//     faq.css('display', 'none');
+//     $("#write").remove();
+//     $("#content_write").load("customer_write.html .part");
+//     alert(tit);
 
 
-}
+// }
 
 function order_open() { // 주문조회 창 열기
     $('#ifm_order').addClass('add');
