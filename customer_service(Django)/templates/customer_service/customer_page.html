@@ -13,7 +13,7 @@
 {% if admin == 1%}
 
 <script>
-    alert("관리자 권한으로 접근할 수 없습니다.");
+    alert("관리자 권한으로 접근할 수 없습니다."); // 고객센터 페이지는 고객만이 문의작성이 가능하기 때문에 관리자접근을 제한한다.
     history.back(-1);
 </script>
 {% endif %}
@@ -139,7 +139,7 @@
         </div>
         <div class="layout-pagination">
             <div class="pagediv" style="font-size: 0px;padding-bottom:100px;">
-                <!--페이지 번호 표시 부분 공백없도록 수정-->
+                <!--페이지 번호 표시 부분 공백없도록 수정완료 -->
                 <a href="/shop/mypage/mypage_qna.php?&amp;page=1" class="layout-pagination-button layout-pagination-first-page">맨 처음 페이지로 가기</a><a href="/shop/mypage/mypage_qna.php?&amp;page=1" class="layout-pagination-button layout-pagination-prev-page">이전 페이지로 가기</a>
                 <strong class="layout-pagination-button layout-pagination-number __active">1</strong><a href="/shop/mypage/mypage_qna.php?&amp;page=1" class="layout-pagination-button layout-pagination-next-page">다음 페이지로 가기</a><a href="/shop/mypage/mypage_qna.php?&amp;page=1"
                     class="layout-pagination-button layout-pagination-last-page">맨 끝 페이지로 가기</a></div>
@@ -147,7 +147,7 @@
         <!-- end -->
         {% endif %}
         <script>
-            // $(".table_faq").click(function() {                 
+            // $(".table_faq").click(function() {           problem 1. 기존에 있던 코드는 전체 행이 출력되는 문제가 발생했음.       
             //     var faq = $(".table_faq_plus");
             //     if (faq.css('display') === "none") {
             //         faq.css('display', 'block');
@@ -156,20 +156,22 @@
             //     }
             // });
 
-            // 1:1문의 목록에 있는 행을 누를 경우 이벤트 발생.
+            // 1:1문의 목록에 있는 행을 누를 경우 이벤트 발생. - 클릭한 해당 문의 건에 대한 상세 문의내역을 표시함. 
+            // problem 1-solve. 기존에 있던 문제를 해결하기 위해 index를 이용해 새로운 스크립트를 작성함.
+
             $(".table_faq").click(function() {
                 var idx = $(".table_faq").index(this);
                 $('.table_faq:eq(' + idx + ')').next().toggle();
             })
 
 
-            // 글쓰기 페이지
+            // 글쓰기 페이지 이동 이벤트
             $(".write").click(function() {
                 location.href = "{% url 'customer_service:iq_write' %}";
 
             })
 
-            // 수정하기 
+            // 수정하기 페이지 이동 이벤트
             $("#edit").click(function() {
                 document.getElementById("fm_send_tit").submit();
             })

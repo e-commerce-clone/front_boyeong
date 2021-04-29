@@ -18,8 +18,7 @@ function order_put(ordno) { // 주문조회 주문번호 넣기
 $(document).ready(function() { // 문의 삭제하기
     $("#delete").click(function() {
         if (confirm("정말 삭제하시겠습니까?")) {
-            // $('div.mypage_wrap').remove(); // 백엔드 수정 필요
-
+            // 삭제됨.
         } else {
             return false;
         }
@@ -28,7 +27,7 @@ $(document).ready(function() { // 문의 삭제하기
 
 
 
-/**------------------------------------------------------- order_content js */
+/**------------------------------------------------------- order_content.html을 위한 js 처리 */
 
 function add() { // 업로드 추가 삭제 . 
     var table = document.getElementById('add_file');
@@ -61,11 +60,3 @@ function calcul() {
         table.rows[i].cells[0].innerHTML = i + 1;
     }
 }
-// $(document).ready(function(){
-//     $("input:radio[name=ordernoSelect]").click(function(){
-//         if ($("input[name=radio]:checked").val()=="1"){
-//             $("")
-//         }
-//     })
-// })
-// 부모 자식 창으로 해야됨. 라디오버튼 클릭 시 부모창에 값이 전달되어야 함.
