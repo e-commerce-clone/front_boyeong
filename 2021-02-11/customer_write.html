@@ -76,6 +76,7 @@
                                     <iframe id="ifm_order" frameborder="0" scrolling="no" src="order_content.html"></iframe>
                                     <!-- <iframe id="ifm_order " frameborder="0 " scrolling="no " style="display: block; width: 560px; height: 390px; background-color: rgb(255, 255, 255); position: absolute; left: 0px; top: 0px; border: 1px solid rgb(0, 0,
                                 0); " src="order_content.html "></iframe> -->
+                                    <!-- 위의 부분은 js로 처리함. - 주문조회를 클릭할 경우 작은 프레임창이 나옴 , x버튼을 클릭할 경우 해당 프레임창이 닫히도록 설정함. -->
                                 </div>
                             </td>
                         </tr>
@@ -107,10 +108,7 @@
                                 <div id="qnaNotice">
                                     <div class="inner_qnaNotice">
                                         <div class="notice_qna">
-                                            <!--
-    1:1문의하기에 들어가는 class="qna_public "
-    상품문의하기에 들어가는 class="qna_goods "
-    -->
+
                                             <strong class="tit qna_public">1:1 문의 작성 전 확인해주세요!</strong>
                                             <strong class="tit qna_goods">상품문의 작성 전 확인해 주세요!</strong>
 
@@ -145,7 +143,6 @@
                                             <dl class="list" id="branchByVersion15">
                                                 <dt>주문취소</dt>
                                                 <dd class="old" style="display:none">
-                                                    <!-- 구버전 분기처리 -->
                                                     <span>샛별 지역 : 배송일 전날 19시까지
                                             <br>
                                             택배 지역 : 배송일 전날 18시까지
@@ -221,7 +218,7 @@
 
                                 <table width="95% " id="add_file" cellpadding="0 " cellspacing="0 " border="0 " style="border:solid 1px #f4f4f4; border-collapse:collapse; ">
                                     <tbody>
-                                        <!-- 5개 까지 추가가능. -->
+                                        <!-- 파일 업로드는 최대 5개 까지 추가가능하도록 설정함. -->
                                         <tr id="tr_0 ">
                                             <td width="20 " nowrap=" " align="center ">1</td>
                                             <td width="100% ">
@@ -251,7 +248,7 @@
                     <tbody>
                         <tr>
                             <td align="right" style="padding-top:5px; border:none;" id="avoidDbl">
-                                <!-- 저장 시 db 반영 필요 -->
+
                                 <input type="submit" class="bhs_button yb" value="저장" style="float:none;">
                             </td>
                         </tr>
